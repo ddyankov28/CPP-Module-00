@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 13:40:07 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/14 18:46:43 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/16 16:55:59 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int main(void)
 {
-    PhoneBook pb;
+    PhoneBook phoneBook;
     std::string command;
+    
     while (1)
     {
         std::getline(std::cin, command);

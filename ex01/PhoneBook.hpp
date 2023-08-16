@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 17:17:56 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/14 16:06:43 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/16 16:50:40 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 # define PHONEBOOK_HPP
 
 #include <iostream>
-#include "Contacts.hpp"
+#include "Contact.hpp"
+
 
 class PhoneBook
 {
+    private:
+        Contact	_contacts[7];
     public:
         PhoneBook();    // constructor
         ~PhoneBook();   // destructor
     
+        void    addContact();
 };
 
 #endif
