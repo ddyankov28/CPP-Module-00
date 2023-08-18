@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 13:40:07 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/16 16:55:59 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/17 12:34:11 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,7 @@
 int main(void)
 {
     PhoneBook phoneBook;
-    std::string command;
-    
-    while (1)
-    {
-        std::getline(std::cin, command);
-        if (command == "ADD")
-            std::cout << "add operation" << std::endl;
-        else if (command == "SEARCH")
-            std::cout << "search operation" << std::endl;
-        else if (command == "EXIT")
-        {
-            std::cout << "\t\t*** GOODBYE, SEE YOU SOON ***\t\t" << std::endl;
-            return (0);
-        }
-        else
-        {
-            std::cout << "PLEASE ENTER A VALID COMMAND" << std::endl;
-            continue;
-        }
-        
-    }
+
+    phoneBook.StartPhoneBook();
     return (0);
 }

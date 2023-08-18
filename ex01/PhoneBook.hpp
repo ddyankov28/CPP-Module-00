@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 17:17:56 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/16 16:50:40 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/18 19:19:34 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,26 @@
 # define PHONEBOOK_HPP
 
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
 #include "Contact.hpp"
-
 
 class PhoneBook
 {
     private:
-        Contact	_contacts[7];
+        Contact	_contacts[8];
+        std::string _input;
+        int         _count;
+
+        void    AddContact();
+        void    SearchByIndex();
+        void    ShowPhoneBook();
+        int     SearchPhoneBook();
     public:
         PhoneBook();    // constructor
         ~PhoneBook();   // destructor
-    
-        void    addContact();
+        
+        void    StartPhoneBook();
 };
 
 #endif
