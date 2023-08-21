@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 11:53:12 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/21 15:10:27 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/21 15:39:44 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,11 @@ int     Contact::CheckWhiteSpace()
 {
     int i = 0;
     
+    if (_input == "")
+    {
+        std::cout << "⛔️Please enter a correct input⛔️" << std::endl;
+        return (0);
+    }
     while (_input[i])
     {
         while (isspace(_input[i]))
@@ -130,7 +135,7 @@ void    Contact::AddFirstName()
             if (std::cin.eof())
                 exit(0);
         }
-        if (!CheckName())
+        if (!CheckWhiteSpace() || !CheckName())
             continue ;
         else
         {
@@ -153,7 +158,7 @@ void    Contact::AddLastName()
             if (std::cin.eof())
                 exit(0);
         }
-        if (!CheckName())
+        if (!CheckWhiteSpace() || !CheckName())
             continue ;
         else
         {
@@ -199,7 +204,7 @@ void    Contact::AddPhoneNumber()
             if (std::cin.eof())
                 exit(0);
         }
-        if (!CheckNumber())
+        if (!CheckWhiteSpace() || !CheckNumber())
             continue ;
         else
         {
