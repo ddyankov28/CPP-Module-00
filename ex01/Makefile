@@ -6,13 +6,13 @@
 #    By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/11 17:17:41 by ddyankov          #+#    #+#              #
-#    Updated: 2023/08/17 12:50:17 by ddyankov         ###   ########.fr        #
+#    Updated: 2023/08/21 13:57:21 by ddyankov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = PhoneBook
 
-SRC = PhoneBook.cpp Contact.cpp main.cpp
+SRC = main.cpp Contact.cpp PhoneBook.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 

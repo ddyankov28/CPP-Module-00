@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 17:17:34 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/18 19:48:37 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/21 15:28:06 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 PhoneBook::PhoneBook()
 {
-    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
-    std::cout << "\t     ⭐️                                                                      ⭐️" << std::endl;
-    std::cout << "\t     ⭐️\t\t    📖 𝘿 𝙀 𝙔 𝘼 𝙉 ' 𝙎   𝙋 𝙃 𝙊 𝙉 𝙀 𝘽 𝙊 𝙊 𝙆 ™️ ®️  📖\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️                                                                      ⭐️" << std::endl;
-    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
-    std::cout << "\t     ⭐️\t\t     THE PHONEBOOK ACCEPTS ONLY THESE 3 COMMANDS\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️1. 🇦 🇩 🇩  : Save a new contact\t\t\t\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️2. 🇸 🇪 🇦 🇷 🇨 🇭  : Display a specific contact\t\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️3. 🇪 🇽 🇮 🇹  : Quit and the contacts are lost forever\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️\t\t\t\t\t\t\t\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️\t\t     ❗️❗️THE RULES OF DEYAN'S PHONEBOOK❗️❗️\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️1. Name's first letter is always uppercase, rest always lowercase     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️2. Phone numbers contain only digits, a + can be only at the beginning⭐️" << std::endl;
-    std::cout << "\t     ⭐️3. Nickname and darkest secret can contain everything\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️4. The Phonebook can store a maximum of 8 contacts\t\t     ⭐️" << std::endl;
-    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
+    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
+    std::cout << "\t     ⭐️                                                      ⭐️" << std::endl;
+    std::cout << "\t     ⭐️\t    📖 𝘿 𝙀 𝙔 𝘼 𝙉 ' 𝙎   𝙋 𝙃 𝙊 𝙉 𝙀 𝘽 𝙊 𝙊 𝙆 ™️ ®️  📖     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️                                                      ⭐️" << std::endl;
+    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
+    std::cout << "\t     ⭐️\t     THE PHONEBOOK ACCEPTS ONLY THESE 3 COMMANDS     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️\t     WITHOUT WHITESPACES BEFORE OR AFTER COMMAND     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️1. 🇦 🇩 🇩  : Save a new contact\t\t\t     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️2. 🇸 🇪 🇦 🇷 🇨 🇭  : Display a specific contact\t     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️3. 🇪 🇽 🇮 🇹  : Quit and the contacts are lost forever  ⭐️" << std::endl;
+    std::cout << "\t     ⭐️\t\t\t\t\t\t\t     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️\t\t❗️❗️THE RULES OF DEYAN'S PHONEBOOK❗️❗️\t     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️1. First and Last Name contain only letters\t     ⭐️" << std::endl;
+    std::cout << "\t     ⭐️2. Phone numbers contain only digits, plus or minus   ⭐️" << std::endl;
+    std::cout << "\t     ⭐️3. Nickname and darkest secret can contain everything ⭐️" << std::endl;
+    std::cout << "\t     ⭐️4. The Phonebook can store a maximum of 8 contacts    ⭐️" << std::endl;
+    std::cout << "\t     ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️" << std::endl;
     return;
 }
 PhoneBook::~PhoneBook()
@@ -39,10 +40,15 @@ PhoneBook::~PhoneBook()
 void    PhoneBook::StartPhoneBook()
 {
     _count = 0;
+    
     while (1)
     {
         std::cout << "Please enter a command (🇦 🇩 🇩 , 🇸 🇪 🇦 🇷 🇨 🇭 , 🇪 🇽 🇮 🇹 )" << std::endl;
-        std::getline(std::cin, _input);
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (_input == "ADD")
             AddContact();
         else if (_input == "SEARCH")
@@ -57,7 +63,10 @@ void    PhoneBook::StartPhoneBook()
             return ;
         }
         else
+        {
+            std::cout << "📛The command is not valid📛" << std::endl;
             continue ;
+        }
     }
 }
 void    PhoneBook::AddContact()
@@ -75,7 +84,8 @@ void    PhoneBook::AddContact()
     std::cout << "✅Contact has been added successfully✅" << std::endl;
    
     n++;
-    _count++;
+    if (_count < 8)
+        _count++;
 }
 int    PhoneBook::SearchPhoneBook()
 {
@@ -133,25 +143,33 @@ void    PhoneBook::ShowPhoneBook()
 void    PhoneBook::SearchByIndex()
 {
     int index = 0;
-    std::string   inp;
 
     while (1)
     {
         std::cout << "Please enter an index 0,1,2,3,4,5,6 or 7 for full info ↩️" << std::endl;
-        std::getline(std::cin, inp);
-        index = std::atoi(inp.c_str());
-        if (index < 0 || index > 8 || _contacts[index].GetFirstName() == "")
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
+        if (_input[0] < '0' || _input[0] > '7')
+        {
+            std::cout << "📛Try again with a number📛" << std::endl;
+            continue ;
+        }
+        index = std::atoi(_input.c_str());
+        if (index < 0 || index > 7 || _contacts[index].GetFirstName() == "")
         {
             std::cout << "📛Invalid index. Please try again📛" << std::endl;
             continue;
         }
         else
         {
-            std::cout << "FIRST NAME: " << _contacts[index].GetFirstName() << std::endl;
-            std::cout << "LAST NAME: " << _contacts[index].GetLastName() << std::endl;
-            std::cout << "NICKNAME: " << _contacts[index].GetNickName() << std::endl;
-            std::cout << "PHONE NUMBER: " << _contacts[index].GetPhoneNumber() << std::endl;
-            std::cout << "DARKEST SECRET: " << _contacts[index].GetDarkestSercret() << std::endl;
+            std::cout << "FIRST NAME ->👔" << _contacts[index].GetFirstName() << "👔" << std::endl;
+            std::cout << "LAST NAME ->👔" << _contacts[index].GetLastName() << "👔" << std::endl;
+            std::cout << "NICKNAME ->🤩" << _contacts[index].GetNickName() << "🤩" << std::endl;
+            std::cout << "PHONE NUMBER ->📱" << _contacts[index].GetPhoneNumber() << "📱" << std::endl;
+            std::cout << "DARKEST SECRET ->🕵️ " << _contacts[index].GetDarkestSercret() << "🕵️" << std::endl;
             break ;
         }
     }

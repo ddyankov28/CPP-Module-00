@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 11:53:12 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/18 18:13:20 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/21 15:10:27 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,28 +71,15 @@ int Contact::GetIndex()
 int     Contact::CheckName()
 {
     int i = 0;
-
-    while (isspace(_input[i]))
-        i++;
-    if (!isupper(_input[i]))
-    {
-        std::cout << "⛔️Please enter a correct input⛔️" << std::endl;
-        return (0);
-    }
-    i++;
     while (_input[i])
     {
-        if (!islower(_input[i]))
+        if (isalpha(_input[i]) || isspace(_input[i]))
+            i++;
+        else
         {
-            if (isspace(_input[i]) && isspace(_input[i + 1]))
-                i++;
-            else
-            {
-                std::cout << "⛔️Please enter a correct input⛔️" << std::endl;
-                return (0);
-            }
+            std::cout << "⛔️Please enter a correct input⛔️" << std::endl;
+            return (0);
         }
-        i++;
     }
     return (1);
 }
@@ -117,23 +104,15 @@ int     Contact::CheckNumber()
 {
     int i = 0;
     
-    while (isspace(_input[i]))
-        i++;
-    if (_input[i] == '+')
-        i++;
-    while (isdigit(_input[i]))
-        i++;
-    
-    while (_input[i])
+    while(_input[i])
     {
-        if (isspace(_input[i]) && isspace(_input[i + 1]))
-                i++;
-        else
+        if (isdigit(_input[i]) || _input[i] == '+' || _input[i] == '-' || isspace(_input[i]))
+            i++;
+        else if (!isdigit(_input[i]))
         {
             std::cout << "⛔️Please enter a correct phone number⛔️" << std::endl;
             return (0);
         }
-        i++;
     }
     return (1);
 }
@@ -146,7 +125,11 @@ void    Contact::AddFirstName()
         if (!i)
             std::cout << "Please enter the contact first name↙️" << std::endl;
         i++;
-        std::getline(std::cin, _input);
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (!CheckName())
             continue ;
         else
@@ -165,7 +148,11 @@ void    Contact::AddLastName()
         if (!i) 
             std::cout << "Please enter the contact last name↙️" << std::endl;
         i++;
-        std::getline(std::cin, _input);
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (!CheckName())
             continue ;
         else
@@ -184,7 +171,11 @@ void    Contact::AddNickName()
         if (!i)
             std::cout << "Please enter the contact nickname↙️" << std::endl;
         i++;
-        std::getline(std::cin, _input);
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (!CheckWhiteSpace())
             continue ;
         else
@@ -203,7 +194,11 @@ void    Contact::AddPhoneNumber()
         if (!i)
             std::cout << "Please enter the contact phone number↙️" << std::endl;
         i++;
-        std::getline(std::cin, _input);
+        if (std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (!CheckNumber())
             continue ;
         else
@@ -222,7 +217,11 @@ void    Contact::AddDarkestSecret()
         if (!i)
             std::cout << "Please enter the contact darkest secret↙️" << std::endl;
         i++;
-        std::getline(std::cin, _input);
+        if (!std::getline(std::cin, _input))
+        {
+            if (std::cin.eof())
+                exit(0);
+        }
         if (!CheckWhiteSpace())
             continue ;
         else

@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 11:53:02 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/18 19:17:55 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/08/21 14:34:23 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <cstdlib>
+
 class Contact
 {
     private:
@@ -23,6 +25,7 @@ class Contact
 		std::string	_phoneNumber;
 		std::string _darkestSecret;
 		int			_index;
+		int			_i;
 		std::string _input;
 
 		int		CheckName();
