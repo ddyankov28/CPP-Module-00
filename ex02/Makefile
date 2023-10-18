@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/11 17:17:41 by ddyankov          #+#    #+#              #
-#    Updated: 2023/10/17 12:06:50 by ddyankov         ###   ########.fr        #
+#    Created: 2023/10/17 12:12:52 by ddyankov          #+#    #+#              #
+#    Updated: 2023/10/18 10:33:22 by ddyankov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,10 @@ RED_BACK = \033[0;101m
 GREEN_BACK = \033[0;102m
 COLOUR_END = \033[0m
 
-NAME = PhoneBook
+NAME = account
 # specifies the name of the output executable
 
-SRC = main.cpp Contact.cpp PhoneBook.cpp 
+SRC = tests.cpp Account.cpp
 # source files required for the program
 
 OBJ = $(patsubst %.cpp, obj/%.o, $(SRC))
@@ -27,7 +27,7 @@ OBJ = $(patsubst %.cpp, obj/%.o, $(SRC))
 DEPS = $(patsubst %.cpp, obj/%.d, $(SRC))
 # specifies the dependencies
 
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD -MP
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD -MP -pedantic
 # c++ flags for warning messages, for using the 98 standard required by subject
 # -MMD 1. Automates the process of tracking dependencies between source and 
 #        header files. When a header files is changed the associated source

@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 11:53:12 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/08/21 15:39:44 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:39:42 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,8 @@ void    Contact::AddFirstName()
         if (!i)
             std::cout << "Please enter the contact first name↙️" << std::endl;
         i++;
+        if (std::cin.eof())
+                exit(0);
         if (!std::getline(std::cin, _input))
         {
             if (std::cin.eof())
